@@ -1,14 +1,38 @@
 
-import React from 'react';
-import NavContainer from './NavContainer'
+import React, { useEffect } from 'react';
 
-const App = () => {
+import NavContainer from './NavContainer'
+import LoginPage from './LoginPage'
+import SignUp from './SignUpPage'
+import {api} from '../services/api';
+import { connect } from 'react-redux';
+import { Auth } from '../actions'
+
+const App = (props) => {
+
+    useEffect(() =>{
+        const token = localStorage.token
+        if(token){
+            api.auth.getCurrentUser().then(data => props.Auth(data))
+        }
+    }, [])
+
+    const onLogout = () => {
+        localStorage.removeItem('token')
+        props.Auth({})
+    }
 
     return (
         <div className="App">
-            <NavContainer />
+            <LoginPage />
+            {/* <SignUp /> */}
         </div>
     )
 }
 
-export default App 
+const mapStateToProps= state => {
+    console.log("App:", state)
+    return {}
+}
+
+export default connect(mapStateToProps, {Auth})(App)
