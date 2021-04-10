@@ -2,6 +2,8 @@
 import React from 'react';
 import { connect } from 'react-redux'
 
+import { Form, Button, Input, Radio } from 'semantic-ui-react'
+
 import { api } from '../services/api'
 import { Auth } from '../actions'
 
@@ -45,48 +47,80 @@ class SignUp extends React.Component {
     render () {
 
         return (
-            <div>
-                <form onSubmit={e => this.handleSubmit(e)}>
-                    <div>
-                        <label>Name</label>
-                        <input 
-                            type="text" 
-                            name="name"
-                            onChange={e => this.handleName(e.target.value)}
-                        />
-                    </div>
-                    <div>
-                        <label>Username</label>
-                        <input 
-                            type="text" 
-                            name="username"
-                            onChange={e => this.handleUsername(e.target.value)}
-                        />
-                    </div>
-                    <div>
-                        <label>Email</label>
-                        <input 
-                            type="text" 
-                            name="email"
-                            onChange={e => this.handleEmail(e.target.value)}
-                        />
-                    </div>
-                    <div>
-                        <label>Password</label>
-                        <input 
-                            type="password" 
-                            name="password"
-                            onChange={e => this.handlePassword(e.target.value)}
-                        />
-                    </div>
-                    <div>
-                        <input type="radio" value='true' name="admin" onChange={e => this.handleRadio(e.target.value)}/>Admin
-                        <input type="radio" value="false" name="admin" onChange={e => this.handleRadio(e.target.value)}/> Employee
-                    </div>
-                    <div>
-                        <button>Create Account</button>
-                    </div>
-                </form>
+            <div className="ui middle aligned center aligned grid">
+                <div className="column">
+                    <Form onSubmit={e => this.handleSubmit(e)}>
+                        <div>
+                            
+                            <Form.Input 
+                                icon="user"
+                                iconPosition="left"
+                                label="Name"
+                                type="text" 
+                                name="name"
+                                onChange={e => this.handleName(e.target.value)}
+                            />
+                        </div>
+                        <div>
+                        
+                            <Form.Input 
+                                label="Username"
+                                icon="user outline"
+                                iconPosition="left"
+                                type="text" 
+                                name="username"
+                                onChange={e => this.handleUsername(e.target.value)}
+                            />
+                        </div>
+                        <div>
+            
+                            <Form.Input 
+                                label="Email Address"
+                                icon="envelope"
+                                iconPosition="left"
+                                type="text" 
+                                name="email"
+                                onChange={e => this.handleEmail(e.target.value)}
+                            />
+                        </div>
+                        <div>
+                            
+                            <Form.Input 
+                                label="Password"
+                                icon="lock"
+                                iconPosition="left"
+                                type="password" 
+                                name="password"
+                                onChange={e => this.handlePassword(e.target.value)}
+                            />
+                        </div>
+                        <br/>
+                        <div className="ui middle aligned center aligned grid inline fields">
+                            <div className="field">
+                                <input 
+                                    type="radio" 
+                                    value='true' 
+                                    name="admin" 
+                                    onChange={e => this.handleRadio(e.target.value)}
+                                />
+                                <label>Admin</label> 
+                            </div>
+                            <div className="field">
+                                <input 
+                                    type="radio" 
+                                    value="false" 
+                                    name="admin" 
+                                    onChange={e => this.handleRadio(e.target.value)}
+                                /> 
+                                <label>Employee</label>
+                            </div>
+                        </div>
+                        <br />
+                        <div>
+                            <Button primary>Create Account</Button>
+                        </div>
+                    </Form>
+                </div>
             </div>
         )
     }

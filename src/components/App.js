@@ -1,11 +1,12 @@
 
 import React, { useEffect } from 'react';
-
-import NavContainer from './NavContainer'
-import LoginPage from './LoginPage'
-import SignUp from './SignUpPage'
-import {api} from '../services/api';
 import { connect } from 'react-redux';
+import { BrowserRouter, Route } from 'react-router-dom'
+
+import Header from './Header'
+import LoginPage from './LoginPage'
+import SignUpPage from './SignUpPage'
+import { api } from '../services/api';
 import { Auth } from '../actions'
 
 const App = (props) => {
@@ -23,9 +24,17 @@ const App = (props) => {
     }
 
     return (
-        <div className="App">
-            <LoginPage />
-            {/* <SignUp /> */}
+        <div className="ui container">
+
+            <BrowserRouter>
+                <div>
+                    <Header logout={onLogout}/>
+                    <Route path="/" exact component={LoginPage} />
+                    <Route path='/signup' exact component={SignUpPage} />
+                    
+                </div>
+            </BrowserRouter>
+           
         </div>
     )
 }
