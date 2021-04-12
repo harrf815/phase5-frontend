@@ -12,23 +12,28 @@ import { api } from '../services/api'
 import { Auth } from '../actions'
 
 
+
 const schema = yup.object().shape({
     username: yup.string().required(),
     password: yup.string().min(3).max(15).required()
 })
 
 const submitForm = (data, Auth) => {
-    console.log(data)
     const newUser = {
         username: data.username,
         password: data.password
     }
     api.auth.login(newUser).then(data => {
-        console.log(data)
         localStorage.setItem('token', data.jwt)
         Auth(data)
     })
 }
+
+// const handleClick = () => {
+//     return (
+//         <Home />
+//     )
+// }
 
 const LoginPage = (props) => {
 
@@ -76,7 +81,13 @@ const LoginPage = (props) => {
                         </div>
 
                         <div >
-                            <Button style={{width: "500px"}} content="Login" type="submit" primary />
+                            <Button 
+    
+                                style={{width: "500px"}} 
+                                content="Login" 
+                                type="submit" 
+                                primary 
+                            />
                         </div>
                         
                     </div>
@@ -94,9 +105,6 @@ const LoginPage = (props) => {
     )
 }
 
-const mapStateToProps = state => {
-    console.log('login:', state )
-     return {}
-}
 
-export default connect(mapStateToProps, { Auth })(LoginPage)
+
+export default connect(null, { Auth })(LoginPage)

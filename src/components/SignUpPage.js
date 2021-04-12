@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 
-import { Form, Button, Input, Radio } from 'semantic-ui-react'
+import { Form, Button } from 'semantic-ui-react'
 
 import { api } from '../services/api'
 import { Auth } from '../actions'
@@ -125,9 +125,6 @@ class SignUp extends React.Component {
         )
     }
 }
-const mapStateToProps = state => {
-    console.log("Signup:", state)
-    return {}
-}
 
-export default connect(mapStateToProps, {Auth})(SignUp)
+
+export default connect(null, {Auth})(SignUp)

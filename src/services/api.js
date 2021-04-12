@@ -44,6 +44,23 @@ const getCurrentUser = () => {
     .then(res => res.json())
 }
 
+const getPost = () => {
+    return fetch(`${URL}/posts`).then(res => res.json())
+        
+}
+
+const addPost = (newPost) => {
+    return fetch (`${URL}/posts`, {
+        method: 'POST',
+        headers: {
+            "Content-Type" : "application/json",
+            Accept: "application/json"
+        },
+        body: JSON.stringify(newPost)
+    })
+    .then(res => res.json())
+}
+
 export default axios.create({
     baseURL: 'http://localhost:3000/api/v1'
 })
@@ -53,5 +70,9 @@ export const api = {
         signup,
         login,
         getCurrentUser,
+    },
+    posts: {
+        addPost, 
+        getPost,
     }
 }
