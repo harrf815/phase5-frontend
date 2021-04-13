@@ -1,14 +1,19 @@
 
 import React from 'react';
+import { connect } from 'react-redux'
 
 import { Form, Button } from "semantic-ui-react"
+import { api } from '../services/api'
+import { postBusiness } from '../actions'
+import BusinessDetail from './BuisnessDetail'
 
 class BusinessAdmin extends React.Component {
 
     state = {
         name: '',
         ein: null,
-        code: null
+        code: null, 
+        
     }
 
     handleName = data => this.setState({ name: data })
@@ -20,9 +25,10 @@ class BusinessAdmin extends React.Component {
         const newBusiness = {
             name: this.state.name,
             ein: this.state.ein,
-            code: this.state.code 
+            code: this.state.code ,
+            user_id: this.props.user.id 
         }
-        console.log(newBusiness)
+        api.business.addBusiness(newBusiness).then(data => this.props.postBusiness(data))
     }
 
     render () {
@@ -30,13 +36,7 @@ class BusinessAdmin extends React.Component {
         return (
 
             <div>
-                <br />
-                <div className="">
-                    <h3>Business Detail</h3>
-                    <h5>Business Name: </h5>
-                    <h5>EIN: </h5>
-                    <h5>Access Code: </h5>
-                </div>
+               <BusinessDetail />
                 <div>
                 <br />
                 <h3>Business Form</h3>
@@ -76,4 +76,9 @@ class BusinessAdmin extends React.Component {
     }
 }
 
-export default BusinessAdmin
+const mapStateToProps = state => {
+    console.log(state)
+    return { user: state.auth.user }
+}
+
+export default connect(mapStateToProps, { postBusiness })(BusinessAdmin)

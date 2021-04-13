@@ -20,3 +20,16 @@ export const fetchContent = data => {
     }
 }
 
+export const postBusiness = data => {
+    return {
+        type: 'POST_BUSINESS',
+        payload: data
+    }
+}
+
+export const fetchBusiness = data => {
+    return {
+        type: 'FETCH_BUSINESS',
+        payload: data
+    }
+}

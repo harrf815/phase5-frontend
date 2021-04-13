@@ -61,6 +61,22 @@ const addPost = (newPost) => {
     .then(res => res.json())
 }
 
+const getBusiness = () => {
+    return fetch(`${URL}/businesses`).then(res => res.json())
+}
+
+const addBusiness = (newBusiness) => {
+    return fetch (`${URL}/businesses`, {
+        method: 'POST',
+        headers: {
+            "Content-Type" : "application/json",
+            Accept: "application/json"
+        },
+        body: JSON.stringify(newBusiness)
+    })
+    .then(res => res.json())
+}
+
 export default axios.create({
     baseURL: 'http://localhost:3000/api/v1'
 })
@@ -74,5 +90,9 @@ export const api = {
     posts: {
         addPost, 
         getPost,
+    },
+    business: {
+        addBusiness,
+        getBusiness,
     }
 }
