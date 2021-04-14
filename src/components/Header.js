@@ -26,7 +26,7 @@ const Header = (props) => {
                         <Link to="/" className="item">
                             {`Hello, ${props.user.name}`}
                         </Link>
-                        <Link to="/" className="item" onClick={props.logout}>
+                        <Link to="/login" className="item" onClick={props.logout}>
                             Logout
                         </Link>
                     </div>

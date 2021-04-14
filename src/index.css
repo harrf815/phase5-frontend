@@ -4,3 +4,78 @@
     margin: 0 !important; 
     height: 50px;
   }
+
+ .para {
+   font-size: large;
+   font-family: 'Poppins', sans-serif;
+   color: gray;
+   letter-spacing: 0.5px;
+ }
+ 
+ h3 {
+  letter-spacing: 0.5px;
+ }
+
+ .create {
+   background-color:blue; /* Green */
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+ }
+
+ .log {
+   color: grey;
+   letter-spacing: 0.5px;
+   
+ }
+
+ #font {
+  font-family: 'Poppins', sans-serif;
+ }
+
+ li {
+	list-style-type: none!important;
+}
+
+ul {
+	margin-bottom: 20px;
+	margin-left: -50px;
+}
+
+ul li {
+	color: #232525;
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
+	/* font-size: 1.4rem; */
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	/* text-transform: uppercase; */
+}
+
+ul.checkmark {
+	margin-top: 20px;
+}
+
+ul.checkmark li:before {
+	font-size: 20px;
+	/* font-size: 4.8rem; */
+	vertical-align: middle;
+}
+
+ul.checkmark li:before {
+	color: blue;
+	content: "✓";
+	display: inline-block;
+	font-family: 'ionicons';
+	margin-left: -36px;
+	width: 36px;
+}
+
+ul.checkmark li {
+	line-height: 1;	
+	padding: 8px 0 8px 36px;
+}

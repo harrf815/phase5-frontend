@@ -33,3 +33,17 @@ export const fetchBusiness = data => {
         payload: data
     }
 }
+
+export const postSchedule = data => {
+    return {
+        type: 'POST_SCHEDULE',
+        payload: data
+    }
+}
+
+export const fetchSchedule = data => {
+    return {
+        type: 'FETCH_SCHEDULE',
+        payload: data
+    }
+}

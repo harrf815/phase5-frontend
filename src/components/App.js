@@ -8,6 +8,7 @@ import LoginPage from './LoginPage'
 import SignUpPage from './SignUpPage'
 import Scheduler from './Scheduler'
 import Home from './Home'
+import Welcome from './Welcome'
 import BusinessAdmin from './BusinessAdmin'
 import { api } from '../services/api';
 import { Auth } from '../actions'
@@ -34,7 +35,8 @@ const App = (props) => {
             <BrowserRouter>
                 <div>
                     <Header logout={onLogout}/>
-                    <Route path="/" exact component={LoginPage} />
+                    <Route path="/" exact component={Welcome} />
+                    <Route path="/login" exact component={LoginPage} />
                     <Route path='/signup' exact component={SignUpPage} />
                     <Route path='/scheduler' exact component={Scheduler} />
                     <Route path="/home" exact component={Home} />
