@@ -4,7 +4,11 @@ import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject } from '@
 
 
 class Scheduler extends React.Component {
-
+    
+    state = {
+        
+    }
+    
     scheduleData = data => {
         console.log(data)
     }
@@ -13,9 +17,17 @@ class Scheduler extends React.Component {
     render() {
 
         return (
+            <div>
             <ScheduleComponent actionBegin={this.scheduleData}>
                 <Inject services={[Day, Week, WorkWeek, Month, Agenda]}/>
             </ScheduleComponent>
+            <br />
+            <div>
+                <button>Publish</button>
+            </div>
+            </div>
+            
+
 
         )
     }

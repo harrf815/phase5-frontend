@@ -7,8 +7,17 @@ import { Button, Comment, Form, Header } from 'semantic-ui-react'
 
 import { api } from '../services/api'
 import { fetchContent } from '../actions'
+import Reply from './Reply'
 
 class Contents extends React.Component {
+
+    state = {
+        isHidden: true
+    }
+
+    toggleHidden() {
+        this.setState({ isHidden: !this.state.isHidden})
+    }
 
     componentDidMount() {
         api.posts.getPost().then(data => this.props.fetchContent(data))
@@ -17,20 +26,30 @@ class Contents extends React.Component {
     renderContents () {
         return this.props.posts.map(content => {
             return (
-                <div key={content.id}>  
+                <div className="item" key={content.id}>  
                     <div>
-                    <Comment.Avatar className="ui tiny circular image" src=''/>
+                    <Comment.Avatar className="ui small circular image" src={faker.image.avatar()}/>
                     </div>
+                    <div >
                     <Comment.Content>
-                        <Comment.Author as='a'>{content.user.name}</Comment.Author>
-                        <Comment.Metadata>
+                        <h3 className="ui left aligned header" as='a'>{content.user.name}</h3>
+                        <Comment.Metadata >
                             <div>Today at 5:42PM</div>
                         </Comment.Metadata>
-                        <Comment.Text>{content.content}</Comment.Text>
+                        <Comment.Text className="ui center aligned header">{content.content}</Comment.Text>
                         <Comment.Actions>
-                            <Comment.Action>Reply</Comment.Action>
+                            <Comment.Action 
+                                onClick={this.toggleHidden.bind(this)}
+                                className="ui right floated content"
+                            >
+                            Reply
+                            </Comment.Action>
+                            <div className="ui right floated content">
+                                {!this.state.isHidden && <Reply />}
+                            </div>
                         </Comment.Actions>
                     </Comment.Content>
+                    </div>
                 </div>
             )
         })
@@ -40,7 +59,7 @@ class Contents extends React.Component {
     render() {
 
         return (
-            <div> {this.renderContents()}</div>
+            <div className="ui relaxed divided list" > {this.renderContents()}</div>
         )
     }
 }

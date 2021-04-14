@@ -68,3 +68,40 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+	
+User 
+-	Name
+-	Email
+-	Password digest 
+-	Boolean (admin or employee)
+
+Payroll**
+-	Employee Hours
+-	Rate 
+-	Start date 
+-	End date 
+-	User id
+
+Schedule 
+-	Start time 
+-	End time 
+-	User id
+-	Payroll id 
+
+Post
+-	Content
+-	User id 
+
+Comments
+-	Comment 
+-	Post id 
+-	User id 
+
+Business 
+-	Name
+-	EIN (business tax number)
+-	Business Code
+
+User/Business
+-	User id 
+-	Business id 

@@ -37,7 +37,6 @@ const getCurrentUser = () => {
     return fetch(`${URL}/getuser`,{
         method: 'GET',
         headers: {
-            "Content-Type": "appliaction/json",
             Authorization: `Bearer ${localStorage.token}`,
         }
     })
@@ -62,7 +61,13 @@ const addPost = (newPost) => {
 }
 
 const getBusiness = () => {
-    return fetch(`${URL}/businesses`).then(res => res.json())
+    return fetch(`${URL}/businesses`, {
+        method: 'GET',
+        headers: {
+            Authorization: `Bearer ${localStorage.token}`,
+        }
+    })
+    .then(res => res.json())
 }
 
 const addBusiness = (newBusiness) => {
@@ -70,7 +75,9 @@ const addBusiness = (newBusiness) => {
         method: 'POST',
         headers: {
             "Content-Type" : "application/json",
-            Accept: "application/json"
+            Accept: "application/json",
+            Authorization: `Bearer ${localStorage.token}`,
+
         },
         body: JSON.stringify(newBusiness)
     })

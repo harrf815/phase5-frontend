@@ -36,19 +36,23 @@ class Post extends React.Component {
                     
                 </Header>
                 <Form onSubmit={e => this.handleSubmit(e)}>
-                    <Form.Input onChange={e => this.hanldePost(e.target.value)} />
-                    <Button
-                        content='Submit'
-                        labelPosition='left'
-                        icon='edit'
-                        primary
+                    <Form.Input 
+                        action={{
+                            color: 'blue',
+                            labelPosition: 'left',
+                            icon: 'edit',
+                            content: 'Post',
+                        }}
+                        actionPosition='left'
+                        onChange={e => this.hanldePost(e.target.value)} 
                     />
                 </Form>
                 <br />
 
 
-
-                <Contents />
+                <div >       
+                    <Contents />
+                </div>  
 
 
             </Comment.Group>
@@ -57,7 +61,6 @@ class Post extends React.Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state.auth.user)
     return { user: state.auth.user }
 }
 
