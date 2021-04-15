@@ -52,9 +52,9 @@ const Welcome = () => {
                         
                         
                     </div>
-                    <div  className="ui floated right content">
+                    {/* <div  className="ui floated right content">
                             <img id="img1" src={image1}/>
-                    </div>
+                    </div> */}
             </div>
         </div>
     )

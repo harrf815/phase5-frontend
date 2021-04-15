@@ -6,7 +6,7 @@ import * as yup from 'yup'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { Button } from 'semantic-ui-react'
+import { Button, Header } from 'semantic-ui-react'
 
 import { api } from '../services/api'
 import { Auth } from '../actions'
@@ -37,21 +37,19 @@ const submitForm = (data, Auth) => {
 
 const LoginPage = (props) => {
 
-    const { register, handleSubmit, errors } = useForm({
+    const { register, handleSubmit} = useForm({
         resolver: yupResolver(schema),
     })
 
     return (
-        <div className="ui middle aligned center aligned grid">
-            <div className="column">
+        <div className="ui container">
+            <div id="container" className="ui container">
 
-                <h2 className="ui image header">
-                    <div className="content">
+
+                <form id="login" className="ui large form" onSubmit={handleSubmit(data => submitForm(data, props.Auth))}>
+                <Header as="h2" textAlign="center" >
                         Login to your Account
-                    </div>
-                </h2>
-
-                <form className="ui large form" onSubmit={handleSubmit(data => submitForm(data, props.Auth))}>
+                </Header>
 
                     <div className="ui stacked secondary segment">
 
@@ -83,7 +81,7 @@ const LoginPage = (props) => {
                         <div >
                             <Button 
     
-                                style={{width: "500px"}} 
+                                style={{width: "695px"}} 
                                 content="Login" 
                                 type="submit" 
                                 primary 
@@ -92,13 +90,13 @@ const LoginPage = (props) => {
                         
                     </div>
 
-                </form>
-
-                <div className="ui message">
-                    <Link to="/signup" className="item">
+                <div className="ui message" style={{textAlign: 'center'}}>
+                    <Link to="/signup" className="item" >
                         Create an Account
                     </Link>
                 </div>
+                </form>
+
 
             </div>
         </div>

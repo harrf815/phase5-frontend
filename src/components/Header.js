@@ -12,21 +12,21 @@ const Header = (props) => {
         < >
             { loggedIn ? (
                 <div className="ui secondary menu">
-                    <Link to="/home" className="item">
+                    <Link to="/home" className="title item">
                         Home
                     </Link>
-                    <Link to='/businessadmin' className="item">
+                    <Link to='/businessadmin' className="title item">
                         Business Info
                     </Link>
-                    <Link to="/scheduler" className="item">
+                    <Link to="/scheduler" className="title item">
                         Schedule 
                     </Link>
                     
                     <div className="right menu">
-                        <Link to="/" className="item">
+                        <Link to="/" className="title item">
                             {`Hello, ${props.user.name}`}
                         </Link>
-                        <Link to="/login" className="item" onClick={props.logout}>
+                        <Link to="/" className="title item" onClick={props.logout}>
                             Logout
                         </Link>
                     </div>

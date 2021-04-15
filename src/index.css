@@ -1,10 +1,30 @@
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-schedule/styles/material.css";
 
+/*! Header */
 .ui.secondary.menu {
     background: rgb(174, 185, 207) !important;
     margin: 0 !important; 
-    height: 50px;
+    height: 80px;
   }
+.title.item {
+	font-size:large;
+	font-weight: 200;
+}
 
+.title.item:hover {
+	color: blue;
+}
+
+/*! Weclome Page */
  .para {
    font-size: large;
    font-family: 'Poppins', sans-serif;
@@ -78,4 +98,45 @@ ul.checkmark li:before {
 ul.checkmark li {
 	line-height: 1;	
 	padding: 8px 0 8px 36px;
+}
+
+/*! Login Page */
+
+#container.container {
+	margin-top: 80px;
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+}
+
+
+
+#login {
+	margin-top: 70px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/*! Home/Post */
+
+#postlist.ui.comments {
+	margin-right: 0;
+	max-width: none;
+	
+}
+
+#feed {
+	text-align: center;
+	margin-top: 20px;
+}
+
+#content.ui.contents {
+	overflow: scroll;
+	height: 400px;
 }

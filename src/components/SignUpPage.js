@@ -42,6 +42,7 @@ class SignUp extends React.Component {
             localStorage.setItem('token', data.jwt )
             this.props.Auth(data)
         })
+        this.props.history.push('/home')
     }
 
     render () {

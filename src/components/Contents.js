@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import faker from 'faker'
 
-import { Button, Comment, Form, Header } from 'semantic-ui-react'
+import { Comment } from 'semantic-ui-react'
 
 import { api } from '../services/api'
 import { fetchContent } from '../actions'
