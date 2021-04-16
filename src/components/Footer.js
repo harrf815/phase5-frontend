@@ -12,13 +12,13 @@ const Footer = () => {
               <div className="three wide column">
                 <h4 className="ui inverted header">About</h4>
                 <div className="ui inverted link list">
-                  <a href="#" className="item">
+                  <a href="..." className="item">
                     Scheduler
                   </a>
-                  <a href="#" className="item">
+                  <a href="..." className="item">
                     Contact Us
                   </a>
-                  <a href="#" className="item">
+                  <a href="..." className="item">
                     Project Repo
                   </a>
                 </div>
@@ -26,7 +26,7 @@ const Footer = () => {
               <div className="three wide column">
                 <h4 className="ui inverted header">Contributers</h4>
                 <div className="ui inverted link list">
-                  <a href="#" className="item">
+                  <a href="..." className="item">
                   link to Harrf's GitHub
                   </a>
                  

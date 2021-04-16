@@ -26,7 +26,8 @@ class Contents extends React.Component {
     renderContents () {
         return this.props.posts.map(content => {
             return (
-                <div className="item" key={content.id}>  
+                <div className="item" key={content.id}> 
+                <br/> 
                     <div className="comment box">
                     <Comment.Avatar className="ui small circular image" src={faker.image.avatar()}/>
                     </div>

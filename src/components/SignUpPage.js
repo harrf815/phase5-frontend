@@ -51,7 +51,7 @@ class SignUp extends React.Component {
         return (
             <div className="wrapper" >
                 <div className="image container">
-                    <img id="signupimage" src={image}/>
+                    <img id="signupimage" src={image} alt="worker"/>
                     <h2 id="imgtext"> One Step Closer to Making Management Easier</h2>
                 </div>
                 <div className="first wrap">

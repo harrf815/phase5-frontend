@@ -2,10 +2,11 @@
 import React from 'react';
 import { connect } from 'react-redux'
 
-import { Form, Button } from "semantic-ui-react"
+import { Form, Button, Header } from "semantic-ui-react"
 import { api } from '../services/api'
 import { postBusiness } from '../actions'
 import BusinessDetail from './BuisnessDetail'
+
 
 class BusinessAdmin extends React.Component {
 
@@ -36,6 +37,8 @@ class BusinessAdmin extends React.Component {
         return (
 
             <div>
+                <br/>
+               <Header as="h1" dividing textAlign="center">Business Detail</Header>
                <BusinessDetail />
                 <div>
                 <br />
@@ -71,6 +74,11 @@ class BusinessAdmin extends React.Component {
                         </div>
                     </Form>
                 </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                
             </div>
         )
     }

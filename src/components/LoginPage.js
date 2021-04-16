@@ -19,29 +19,29 @@ const schema = yup.object().shape({
     password: yup.string().min(3).max(15).required()
 })
 
-const submitForm = (data, Auth) => {
-    const newUser = {
-        username: data.username,
-        password: data.password
-    }
-    api.auth.login(newUser).then(data => {
-        localStorage.setItem('token', data.jwt)
-        Auth(data)
-    })
-    // props.history.push('/home')
-    // this.props.history.push('/home')
-}
 
 
 const LoginPage = (props) => {
-
+    
+    const submitForm = (data, Auth) => {
+        const newUser = {
+            username: data.username,
+            password: data.password
+        }
+        api.auth.login(newUser).then(data => {
+            localStorage.setItem('token', data.jwt)
+            Auth(data)
+        })
+        props.history.push('/home')
+    }
+    
     const { register, handleSubmit} = useForm({
         resolver: yupResolver(schema),
     })
 
     return (
         <div id="loginback" className="ui container">
-            <img id="loginimg" src={image}/>
+            <img id="loginimg" src={image} alt="female worker"/>
             <div id="container" className="ui container">
 
 
@@ -95,9 +95,17 @@ const LoginPage = (props) => {
                     </Link>
                 </div>
                 </form>
-
-
             </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
         </div>
     )
 }

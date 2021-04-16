@@ -4,6 +4,7 @@
  import { Header, Card } from 'semantic-ui-react'
 
  import Post from './Post'
+
  import image from '../assests/money.png'
 
  const Home = () => {
@@ -55,7 +56,7 @@
                  </Card.Group>
              </div>
              <div>
-                 <img id="moneyimg" src={image}/>
+                 <img id="moneyimg" src={image} alt="money"/>
                  <p id="refer">Refer a friend to Manage Lite. You get a $100 gift card when they sign up and run their first scheduler.  </p>
             </div>
             <br/>

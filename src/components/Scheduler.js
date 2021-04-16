@@ -3,10 +3,11 @@ import * as React from 'react';
 import { connect } from 'react-redux'
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject} from '@syncfusion/ej2-react-schedule';
 
-import { Button, Header } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 
 import { api } from '../services/api'
 import { postSchedule, fetchSchedule } from '../actions'
+
 
 
 
@@ -60,7 +61,7 @@ class Scheduler extends React.Component {
                 <br />
                 <div>
                     <Button     
-                        style={{width: "700px", marginLeft: '15px', marginLeft: '220px'}} 
+                        style={{width: "700px", marginLeft: '220px'}} 
                         content="Login" 
                         primary >Publish
                     </Button>

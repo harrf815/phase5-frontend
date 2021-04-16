@@ -8,6 +8,7 @@ import image1 from '../assests/recurring_events-1.jpg'
 import image2 from '../assests/r2.jpg'
 import image3 from '../assests/multiple_calendar_views.png'
 
+
 const Welcome = () => {
 
     return (
@@ -50,7 +51,7 @@ const Welcome = () => {
                         </ul>
                         </div>
                         <div  className="eleven wide column">
-                            <img id="img1" src={image2}/>
+                            <img id="img1" src={image2} alt="workers talking"/>
                         </div>
                         
                         
@@ -58,7 +59,7 @@ const Welcome = () => {
                     <br/>
                     <div className="ui container welcome">
                         <Header id="keyfeature" as="h2" dividing textAlign='center'>Key Features</Header>
-                        <img id="welcomeimg2"src={image1}/>
+                        <img id="welcomeimg2"src={image1} alt="calendar"/>
                     </div>
                     <div>
                         <p id="features">
@@ -68,7 +69,7 @@ const Welcome = () => {
                         </p>
                     </div>
                     <div>
-                        <img id="welcomeimg3" src={image3}/>
+                        <img id="welcomeimg3" src={image3} alt="calendar"/>
                     </div>
                     <div>
                         <p id="features">

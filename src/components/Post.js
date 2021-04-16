@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 
-import { Comment, Form, Header, Card } from 'semantic-ui-react'
+import { Comment, Form, Header } from 'semantic-ui-react'
 
 import { api } from '../services/api';
 import { Content } from '../actions'
