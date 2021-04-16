@@ -2,8 +2,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-import image1 from '../assests/r1.png'
+import { Header } from 'semantic-ui-react'
+
+import image1 from '../assests/recurring_events-1.jpg'
 import image2 from '../assests/r2.jpg'
+import image3 from '../assests/multiple_calendar_views.png'
 
 const Welcome = () => {
 
@@ -13,7 +16,7 @@ const Welcome = () => {
                 <div className="ui row">
                     <div className="five wide column">
                         <div>
-                            <h1 id= "font">Name/Logo</h1>
+                            <h1 id= "fonttitle">Manage Lite</h1>
                         </div>
                         <br/>
                         <div>
@@ -52,10 +55,31 @@ const Welcome = () => {
                         
                         
                     </div>
-                    {/* <div  className="ui floated right content">
-                            <img id="img1" src={image1}/>
-                    </div> */}
-            </div>
+                    <br/>
+                    <div className="ui container welcome">
+                        <Header id="keyfeature" as="h2" dividing textAlign='center'>Key Features</Header>
+                        <img id="welcomeimg2"src={image1}/>
+                    </div>
+                    <div>
+                        <p id="features">
+                            Recurring appointments: Easily configure recurring events to be repeated on a daily, weekly, 
+                            monthly, or yearly basis with optimized recurrence options. You can also skip or change the 
+                            occurrence of a recurring appointment.
+                        </p>
+                    </div>
+                    <div>
+                        <img id="welcomeimg3" src={image3}/>
+                    </div>
+                    <div>
+                        <p id="features">
+                            Multiple calendar views: A wide range of built-in view modes are available: day, week, 
+                            workweek, month, schedule, timeline day, timeline week, timeline workweek. The control 
+                            allows you to conveniently customize every view with unique, view-specific options. 
+                        </p>
+                    </div>
+                    <br/>
+                    <br/>
+            </div> 
         </div>
     )
 }

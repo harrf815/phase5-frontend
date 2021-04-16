@@ -27,18 +27,19 @@ class Contents extends React.Component {
         return this.props.posts.map(content => {
             return (
                 <div className="item" key={content.id}>  
-                    <div>
+                    <div className="comment box">
                     <Comment.Avatar className="ui small circular image" src={faker.image.avatar()}/>
                     </div>
+                    
                     <div >
-                    <Comment.Content>
-                        <h3 className="ui left aligned header" as='a'>{content.user.name}</h3>
+                    <Comment.Content className="comment box">
+                        <h3 className="ui left aligned header" as='a'>  {content.user.name}</h3>
                         <Comment.Metadata >
-                            <div>Today at 5:42PM</div>
+                            <div className="time">Today at 5:42PM</div>
                         </Comment.Metadata>
                         <Comment.Text className="ui center aligned header">{content.content}</Comment.Text>
                         <Comment.Actions>
-                            <Comment.Action 
+                            {/* <Comment.Action 
                                 onClick={this.toggleHidden.bind(this)}
                                 className="ui right floated content"
                             >
@@ -46,7 +47,7 @@ class Contents extends React.Component {
                             </Comment.Action>
                             <div className="ui right floated content">
                                 {!this.state.isHidden && <Reply />}
-                            </div>
+                            </div> */}
                         </Comment.Actions>
                     </Comment.Content>
                     </div>

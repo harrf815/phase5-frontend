@@ -3,6 +3,8 @@ import * as React from 'react';
 import { connect } from 'react-redux'
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Inject} from '@syncfusion/ej2-react-schedule';
 
+import { Button, Header } from 'semantic-ui-react'
+
 import { api } from '../services/api'
 import { postSchedule, fetchSchedule } from '../actions'
 
@@ -11,21 +13,9 @@ import { postSchedule, fetchSchedule } from '../actions'
 
 class Scheduler extends React.Component {
 
-    state = {
-        subject: '',
-        startTime: '',
-        endTime: '',
-
-    }
-
     scheduleData = data => {
-        console.log(data)
-
+        
         if (data.data && data.requestType === "eventCreate") {
-            console.log(data.data[0])
-            // this.setState({ subject: data.data[0].Subject})
-            // this.setState({ startTime: data.data[0].StartTime})
-            // this.setState({ endTime: data.data[0].EndTime}) 
             const newShift = {
                 subject: data.data[0].Subject,
                 startTime: data.data[0].StartTime,
@@ -35,10 +25,8 @@ class Scheduler extends React.Component {
         }
        
     }
-
     componentDidMount() {
         api.schedule.getSchedule().then(data => this.props.fetchSchedule(data))
-           
     }
 
     renderShift = () => {
@@ -58,6 +46,7 @@ class Scheduler extends React.Component {
 
         return (
             <div>
+                <br />
                 <ScheduleComponent actionBegin={this.scheduleData} eventSettings={{ dataSource: this.renderShift(),
                     fields: {
                         id: 'Id',
@@ -70,8 +59,14 @@ class Scheduler extends React.Component {
                 </ScheduleComponent>
                 <br />
                 <div>
-                    <button>Publish</button>
+                    <Button     
+                        style={{width: "700px", marginLeft: '15px', marginLeft: '220px'}} 
+                        content="Login" 
+                        primary >Publish
+                    </Button>
+
                 </div>
+                <br/>
             </div>
 
 
@@ -81,7 +76,6 @@ class Scheduler extends React.Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state.schedule)
     return { schedules: state.schedule}
 }
 

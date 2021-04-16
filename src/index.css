@@ -9,20 +9,30 @@
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-react-schedule/styles/material.css";
 
+.main.ui.container {
+	margin-left: auto!important;
+	margin-right: auto!important;
+}
+
 /*! Header */
 .ui.secondary.menu {
-    background: rgb(174, 185, 207) !important;
+    background: rgb(46, 112, 189) !important;
     margin: 0 !important; 
     height: 80px;
-  }
+	/* width: 5000px;
+	margin-left: -100px; */
+  
+}
+
 .title.item {
 	font-size:large;
 	font-weight: 200;
+	color: white!important;
 }
 
-.title.item:hover {
+/* .title.item:hover {
 	color: blue;
-}
+} */
 
 /*! Weclome Page */
  .para {
@@ -53,8 +63,9 @@
    
  }
 
- #font {
-  font-family: 'Poppins', sans-serif;
+ #fonttitle {
+	 margin-top:50px ;
+  	font-family: 'Poppins', sans-serif;
  }
 
  li {
@@ -99,16 +110,47 @@ ul.checkmark li {
 	line-height: 1;	
 	padding: 8px 0 8px 36px;
 }
+#img1 {
+	margin-top: 100px ;
+	
+}
+
+#welcomeimg2 {
+	width: 100%;
+	/* height: 400px; */
+	margin-top: 50px;
+}
+
+#welcomeimg3 {
+	width: 100%;
+	margin-top: 50px;
+	margin-left: 120px;
+}
+
+#features {
+	
+	color: #232525;
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+
+}
+
+#keyfeature {
+	margin-top: 50px;
+}
+
 
 /*! Login Page */
 
 #container.container {
-	margin-top: 80px;
+	margin-top: -380px;
 	background-color: #fff;
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
-	position: relative;
+	position: absolute;
 	overflow: hidden;
 	width: 768px;
 	max-width: 100%;
@@ -121,6 +163,14 @@ ul.checkmark li {
 	margin-top: 70px;
 	margin-left: 20px;
 	margin-right: 20px;
+}
+
+
+
+#loginimg {
+	margin-top: 70px;
+	z-index: 2;
+	width: 100%;
 }
 
 /*! Home/Post */
@@ -140,3 +190,112 @@ ul.checkmark li {
 	overflow: scroll;
 	height: 400px;
 }
+
+/* .ui.small.circular.image {
+	display: inline;
+} */
+
+.ui.left.aligned.header {
+	display: inline;
+	margin-left: 5px;
+}
+
+.time {
+	display:inline;
+	font-size: 10px;
+}
+
+.ui.cards {
+	margin-left: 80px;
+	width: 100%;
+}
+
+#moneyimg {
+	margin-left: 550px;
+	margin-top: 80px;
+	width: 150px;
+
+}
+
+#refer {
+	margin-left: 200px;
+	font-size: medium;
+   font-family: 'Poppins', sans-serif;
+   color: gray;
+   letter-spacing: 0.5px;
+}
+
+
+/*! Sign up */
+
+.wrapper {
+    width: 100%;
+	height: 800px;
+    border: 1px ;
+	margin-top: 80px;
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+    overflow: hidden; /* add this to contain floated children */
+}
+.first.wrap {
+    width: 30%;
+	height: 800px;
+    float:left; /* add this */
+    border: 1px;
+}
+
+.signup.form.column {
+	margin-top: 80px;
+	margin-left: 30px;
+	margin-right: -20px;
+}
+
+#signupimage{
+	float:right;
+	width: 750px;
+	height: 800px;
+}
+
+.image.container {
+	position: relative;
+	text-align: center;
+	color: rgb(235, 230, 230);
+}
+
+#imgtext {
+	position: absolute;
+	margin-top: 400px;
+	left: 39%;
+	font-size: xx-large;
+}
+
+#signtitle {
+	margin-left: 30px;
+	margin-top: 70px;
+	margin-right: -880px;
+	color: rgba(20, 102, 197, 0.877);
+	letter-spacing: 0.5px;
+}
+#signp {
+	margin-left: 60px;
+	margin-right: -880px;
+	font-size: 12px;
+	color: grey;
+	letter-spacing: 0.5px;
+}
+/* #createbtn {
+	background-color: blue;
+	color: black; 
+} */
+
+/* #submitbtn:hover {
+	border: 1px solid;
+	box-shadow: inset 0 0 20px rgba(255,255,255, 0),
+			0 0 20px rgba(255, 255, 255,.2 );
+	outline-color: rgba(255,255,255, 0);
+	outline-offset: 15px;
+	text-shadow: 1px 1px 2px ;
+	
+} */

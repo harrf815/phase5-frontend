@@ -10,6 +10,8 @@ import Scheduler from './Scheduler'
 import Home from './Home'
 import Welcome from './Welcome'
 import BusinessAdmin from './BusinessAdmin'
+import Payroll from './Payroll'
+import Footer from './Footer'
 import { api } from '../services/api';
 import { Auth } from '../actions'
 
@@ -30,21 +32,25 @@ const App = (props) => {
     }
 
     return (
-        <div className="ui container">
-            {/* <Scheduler /> */}
+        <div >
             <BrowserRouter>
                 <div>
                     <Header logout={onLogout}/>
+                    <div className="main ui container">
                     <Route path="/" exact component={Welcome} />
                     <Route path="/login" exact component={LoginPage} />
                     <Route path='/signup' exact component={SignUpPage} />
                     <Route path='/scheduler' exact component={Scheduler} />
                     <Route path="/home" exact component={Home} />
                     <Route path='/businessadmin' exact component={BusinessAdmin} />
+                    </div>
                 </div>
             </BrowserRouter>
-           
+            <br/>
+            <Footer />
         </div>
+        
+
     )
 }
 

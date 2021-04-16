@@ -10,6 +10,7 @@ import { Button, Header } from 'semantic-ui-react'
 
 import { api } from '../services/api'
 import { Auth } from '../actions'
+import image from '../assests/blackout_dates.png'
 
 
 
@@ -27,13 +28,10 @@ const submitForm = (data, Auth) => {
         localStorage.setItem('token', data.jwt)
         Auth(data)
     })
+    // props.history.push('/home')
+    // this.props.history.push('/home')
 }
 
-// const handleClick = () => {
-//     return (
-//         <Home />
-//     )
-// }
 
 const LoginPage = (props) => {
 
@@ -42,7 +40,8 @@ const LoginPage = (props) => {
     })
 
     return (
-        <div className="ui container">
+        <div id="loginback" className="ui container">
+            <img id="loginimg" src={image}/>
             <div id="container" className="ui container">
 
 
@@ -80,7 +79,7 @@ const LoginPage = (props) => {
 
                         <div >
                             <Button 
-    
+                                
                                 style={{width: "695px"}} 
                                 content="Login" 
                                 type="submit" 

@@ -2,7 +2,8 @@
 import React from 'react';
 import { connect } from 'react-redux'
 
-import { Comment, Form, Header } from 'semantic-ui-react'
+import { Comment, Form, Header, Card } from 'semantic-ui-react'
+
 import { api } from '../services/api';
 import { Content } from '../actions'
 import Contents from './Contents'
@@ -35,6 +36,7 @@ class Post extends React.Component {
                 <Header as='h3' dividing>
                     
                 </Header>
+                <br />
                 <Form onSubmit={e => this.handleSubmit(e)}>
                     <Form.Input 
                         action={{
@@ -48,6 +50,7 @@ class Post extends React.Component {
                     />
                 </Form>
                 <br />
+                
 
 
                 <div id="content" className="ui contents">       
