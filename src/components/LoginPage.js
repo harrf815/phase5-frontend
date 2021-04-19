@@ -61,7 +61,6 @@ const LoginPage = (props) => {
                                     name="username" 
                                     {...register('username')} 
                                 />
-                                {/* <p>{errors.username?.message}</p> */}
                             </div>
                         </div>
 
@@ -106,6 +105,22 @@ const LoginPage = (props) => {
             <br/>
             <br/>
             <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+                
         </div>
     )
 }

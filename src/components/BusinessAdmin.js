@@ -44,36 +44,55 @@ class BusinessAdmin extends React.Component {
                 <br />
                 <h3>Business Form</h3>
                     <Form onSubmit={ e => this.handleSubmit(e)}>
-                        <div>
+                        <Form.Group>
                             <Form.Input 
+                                width={8}
                                 label="Name of Business"
+                                placeholder="Name of Business"
                                 name="name"
                                 type="text"
                                 onChange={ e => this.handleName(e.target.value)}
                             />
-                        </div>
-                        <div>
+                        
                             <Form.Input 
                                 label="EIN"
                                 name="ein"
+                                placeholder="12-345678"
                                 type="number"
                                 onChange={ e => this.handleEin(e.target.value)}
                             /> 
-                        </div>
-                        <div>
+                       
                             <Form.Input 
-                                label="Access Code  ( create a code for employees to access your business )"
+                                width={3}
+                                label="Access Code"
+                                placeholder="1234"
                                 name="code"
                                 type="number"
                                 onChange={ e => this.handleCode(e.target.value)}
                             />
-                        </div>
-                        <br />
-                        <div>
-                            <Button primary>Save</Button>
-                        </div>
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Input label="Address" width={6} placeholder="ex. 1234 Oakland Rd."/>
+                            <Form.Input label="State" width={4} placeholder="State"/>
+                            <Form.Input label="City" width={5} placeholder="City" />
+                            <Form.Input label="Zip Code" width={3} placeholder="Zip Code" />
+                        </Form.Group>
+
+                        <Form.Group>
+                            <Form.Input label="Federal Filing" width={4} placeholder="Federal Filing"/>
+                            <Form.Input label="Business Type" width={4} placeholder="Business Type" />
+                            <Form.Input label="Phone Number" width={4} placeholder="(123)456-7890" />
+                        </Form.Group>
+                        <Button primary>Save</Button>
                     </Form>
                 </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
                 <br/>
                 <br/>
                 <br/>
@@ -85,7 +104,6 @@ class BusinessAdmin extends React.Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state)
     return { user: state.auth.user }
 }
 

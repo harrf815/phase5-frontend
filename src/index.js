@@ -14,7 +14,7 @@ const store = createStore(reducers, composeEnhancers())
 
 ReactDOM.render(
     <Provider store={store}>
-        <App /> 
+        <App style={{minHeight: "100px"}}/> 
     </Provider>,
     document.querySelector('#root')
 )

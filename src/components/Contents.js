@@ -25,6 +25,8 @@ class Contents extends React.Component {
 
     renderContents () {
         return this.props.posts.map(content => {
+            const time = new Date (content.created_at)
+            const timeDate = time.getMonth()+1+"/"+time.getDate()+"/"+time.getFullYear()+" "+time.getHours()+":"+time.getMinutes()
             return (
                 <div className="item" key={content.id}> 
                 <br/> 
@@ -36,7 +38,7 @@ class Contents extends React.Component {
                     <Comment.Content className="comment box">
                         <h3 className="ui left aligned header" as='a'>  {content.user.name}</h3>
                         <Comment.Metadata >
-                            <div className="time">Today at 5:42PM</div>
+                            <div className="time">{timeDate}</div>
                         </Comment.Metadata>
                         <Comment.Text className="ui center aligned header">{content.content}</Comment.Text>
                         <Comment.Actions>

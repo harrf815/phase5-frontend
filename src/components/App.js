@@ -32,7 +32,7 @@ const App = (props) => {
     }
 
     return (
-        <div >
+        <>
             <BrowserRouter>
                 <div>
                     <Header logout={onLogout}/>
@@ -43,12 +43,15 @@ const App = (props) => {
                     <Route path='/scheduler' exact component={Scheduler} />
                     <Route path="/home" exact component={Home} />
                     <Route path='/businessadmin' exact component={BusinessAdmin} />
+                    <Route path='/payroll' exact component={Payroll} />
                     </div>
                 </div>
             </BrowserRouter>
             <br/>
+            <>
             <Footer />
-        </div>
+            </>
+        </>
         
 
     )

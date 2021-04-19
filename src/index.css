@@ -15,8 +15,15 @@
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
+	font-family: Garamond, serif !important;
    letter-spacing: 0.5px;
+}
+
+.ui.inverted.vertical.footer.segment {
+	position: relative;
+	margin-bottom: 0;
+	bottom: 0;
+	width: 100%;
 }
 
 /*! Header */
@@ -33,6 +40,8 @@ body {
 	font-size:large;
 	font-weight: 200;
 	color: white!important;
+	font-family: Garamond, serif !important;
+	letter-spacing: 0.5px;
 }
 
 /* .title.item:hover {
@@ -42,7 +51,8 @@ body {
 /*! Weclome Page */
  .para {
    font-size: large;
-   font-family: 'Poppins', sans-serif;
+   /* font-family: Garamond, serif; */
+   font-family: Garamond, serif !important;
    letter-spacing: 0.5px;
    color: gray;
  }
@@ -70,7 +80,7 @@ body {
 
  #fonttitle {
 	 margin-top:50px ;
-  	font-family: 'Poppins', sans-serif;
+  	font-family: Garamond, serif;
  }
 
  li {
@@ -84,7 +94,7 @@ ul {
 
 ul li {
 	color: #232525;
-	font-family: 'Poppins', sans-serif;
+	font-family: Garamond, serif;
 	font-size: 13px;
 	/* font-size: 1.4rem; */
 	font-weight: 600;
@@ -135,7 +145,7 @@ ul.checkmark li {
 #features {
 	
 	color: #232525;
-	font-family: 'Poppins', sans-serif;
+	font-family: Garamond, serif !important;
 	font-size: 18px;
 	font-weight: 600;
 	letter-spacing: 0.5px;
@@ -225,7 +235,7 @@ ul.checkmark li {
 #refer {
 	margin-left: 200px;
 	font-size: medium;
-   font-family: 'Poppins', sans-serif;
+   font-family: Garamond, serif;
    color: gray;
    letter-spacing: 0.5px;
 }
@@ -256,7 +266,7 @@ ul.checkmark li {
 }
 
 .bustitle {
-	font-family: 'Poppins', sans-serif;
+	font-family: Garamond, serif;
 	color: gray;
 	letter-spacing: 0.5px;
 }
@@ -336,3 +346,23 @@ ul.checkmark li {
 	text-shadow: 1px 1px 2px ;
 	
 } */
+
+.payroll {
+	/* text-align: center; */
+	font-family: Garamond, serif !important;
+    letter-spacing: 0.5px;
+	font-size: 20px;
+}
+
+.fields.payroll.input {
+	margin-left: 300px;
+}
+
+span.right {
+	float: right;
+}
+
+p.left {
+	margin-right: 150px;
+	margin-left: 150px;
+}

@@ -21,6 +21,9 @@ const Header = (props) => {
                     <Link to="/scheduler" className="title item">
                         Schedule 
                     </Link>
+                    <Link to='/payroll' className="title item">
+                        Payroll
+                    </Link>
                     
                     <div className="right menu">
                         <Link to="/" className="title item">
