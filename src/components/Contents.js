@@ -7,7 +7,7 @@ import { Comment } from 'semantic-ui-react'
 
 import { api } from '../services/api'
 import { fetchContent } from '../actions'
-import Reply from './Reply'
+// import Reply from './Reply'
 
 class Contents extends React.Component {
 
@@ -42,6 +42,7 @@ class Contents extends React.Component {
                         </Comment.Metadata>
                         <Comment.Text className="ui center aligned header">{content.content}</Comment.Text>
                         <Comment.Actions>
+                            <Reply />
                             {/* <Comment.Action 
                                 onClick={this.toggleHidden.bind(this)}
                                 className="ui right floated content"

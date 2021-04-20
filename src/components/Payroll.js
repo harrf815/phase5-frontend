@@ -15,7 +15,7 @@
     }
 
     render() {
-
+        
         const total = this.state.hours * this.state.rate
         const saving = total * .08
 
@@ -35,6 +35,7 @@
         return (
             
             <div className="payroll" >
+                <br/>
                 <div>
                     <Header as="h2" dividing textAlign="center">Payroll Calculator</Header>
                 </div>

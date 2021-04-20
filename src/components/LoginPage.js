@@ -120,7 +120,6 @@ const LoginPage = (props) => {
             <br/>
             <br/>
             <br/>
-                
         </div>
     )
 }
