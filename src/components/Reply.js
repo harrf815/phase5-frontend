@@ -16,9 +16,10 @@ class Reply extends React.Component {
         e.preventDefault()
         const newComment = {
             comment: this.state.comments,
-            user_id: ,
-            post_id: ,
+            user_id: this.props.user.id,
+            post_id: this.props.post_id,
         }
+        console.log(newComment)
     }
 
     render () {
@@ -37,4 +38,8 @@ class Reply extends React.Component {
     }
 }
 
-export default Reply
+const mapStateToProps = state => {
+    return  { user: state.auth.user, posts: state.post }
+}
+
+export default connect(mapStateToProps, {} )(Reply)

@@ -1,6 +1,6 @@
  import React from 'react';
 
- import { Form, Header, Grid, GridColumn } from 'semantic-ui-react'
+ import { Form, Header } from 'semantic-ui-react'
  class Payroll extends React.Component {
 
     state = {

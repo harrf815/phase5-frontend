@@ -42,7 +42,7 @@ class Contents extends React.Component {
                         </Comment.Metadata>
                         <Comment.Text className="ui center aligned header">{content.content}</Comment.Text>
                         <Comment.Actions>
-                            <Reply />
+                            {/* <Reply post_id={content.id}/> */}
                             {/* <Comment.Action 
                                 onClick={this.toggleHidden.bind(this)}
                                 className="ui right floated content"
