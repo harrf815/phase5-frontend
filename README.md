@@ -1,7 +1,7 @@
 
 # Manage Lite 
 
-##Bank-End Github Link - https://github.com/harrf815/phase5-backend
+## Bank-End Github Link - https://github.com/harrf815/phase5-backend
 
 ## Descriptions 
 Welcome to Manage Lite!! A webpage for all businesses to come and make their management esaier and lighter. This provides all the needs for a manager or an owner to keep track of all their employess activites. For example, the admin is able to create a schedule and publish for their employess to see through the app. Also admins are able to post content/messages for all employees to see. An easy way to commuicate with all your employees in one place. We are currently working on new software that can help caculate your employees hours. 
